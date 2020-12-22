@@ -1,1 +1,2 @@
-worker: python __main__.py
+worker: python delete.py
+clock: python clock.py
