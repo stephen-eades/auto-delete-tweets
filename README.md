@@ -6,7 +6,7 @@ Python bot hosted on Heroku that deletes old tweets of mine. Runs each day at 4a
 
 1. [Install Python 3](https://www.python.org/downloads/)
 
-2. Install Tweepy, APScheduler, flask, and gunicorn with pip
+2. Install Tweepy and APScheduler with pip
 
 3. [Create a Twitter developer account](https://developer.twitter.com/en/apply-for-access)
 
@@ -33,5 +33,3 @@ Python bot hosted on Heroku that deletes old tweets of mine. Runs each day at 4a
 14. In the Heroku Dashboard Overview tab, make sure to configure your Dynos so the worker and clock are active
 
 15. You can scale the clock using the Heroku CLI with `heroku ps:scale clock=1`
-
-16. Heroku forces bots to sleep after 30 minutes of inactivity. Use a cron-job.org free account to ping your bot 10 minutes before you scheduled the bot to run. 
