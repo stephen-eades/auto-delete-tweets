@@ -15,8 +15,6 @@
 *.launch
 .settings/
 *.sublime-workspace
-
-# IDE - VSCode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -29,6 +27,7 @@ pip-log.txt
 .ipynb_checkpoints
 .env
 /env
+/__pycache__/
 
 # misc
 /.sass-cache
@@ -39,6 +38,9 @@ npm-debug.log
 testem.log
 /typings
 /docs
+credentials.txt
+credentials.json
+credentials.py
 
 # e2e
 /e2e/*.js
