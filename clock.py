@@ -3,8 +3,8 @@ import delete
 
 sched = BlockingScheduler()
 
-# This job is run every day at 4am
-@sched.scheduled_job('cron', day_of_week='mon-sun', hour=4)
+# This job runs every day at 4am
+@sched.scheduled_job('cron', day_of_week='mon-sun', hour=1530)
 def scheduled_job():
     delete.delete_old_tweets()
 
