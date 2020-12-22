@@ -6,6 +6,7 @@ from os import environ
 # Delete tweets older than 365 days that are not pinned or favorited by user
 def delete_old_tweets():
 
+    twitter_user = 'stephen_eades'
     consumer_key = environ['API_KEY']
     consumer_secret_key = environ['API_SECRET_KEY']
     access_token = environ['ACCESS_TOKEN']
@@ -17,7 +18,7 @@ def delete_old_tweets():
     api = tweepy.API(auth)
 
     # Loop through all tweets
-    for status in tweepy.Cursor(api.user_timeline, screen_name=api.get_user('stephen_eades').screen_name).items():
+    for status in tweepy.Cursor(api.user_timeline, screen_name=api.get_user(twitter_user).screen_name).items():
 
         # If the date is equal or older than one year from now
         if datetime.today() - timedelta(days=365) > status.created_at:
